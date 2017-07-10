@@ -5,9 +5,6 @@
 dpkg-divert --local --rename --add /sbin/initctl
 ln -sf /bin/true /sbin/initctl
 
-# Let the conatiner know that there is no tty
-ENV DEBIAN_FRONTEND noninteractive
-
 apt-get update
 apt-get -y upgrade
  
